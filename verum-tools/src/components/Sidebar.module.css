@@ -1,0 +1,102 @@
+.sidebar {
+  width: 210px;
+  min-width: 210px;
+  height: 100%;
+  background: #FFFFFF;
+  border-right: 0.5px solid #e0ddd8;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ─── Logo ──────────────────────────────────────────────── */
+.logoWrap {
+  padding: 1.25rem;
+  border-bottom: 0.5px solid #e0ddd8;
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  max-width: 140px;
+  display: block;
+}
+
+/* ─── Nav ────────────────────────────────────────────────── */
+.nav {
+  flex: 1;
+  padding: 1rem 0;
+  overflow-y: auto;
+}
+
+.sectionLabel {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  color: #b0adb0;
+  padding: 0 1rem 0.5rem;
+  text-transform: uppercase;
+}
+
+.navItem {
+  display: flex;
+  align-items: center;
+  gap: 0.625rem;
+  padding: 0.5rem 1rem;
+  text-decoration: none;
+  font-size: 13.5px;
+  font-weight: 450;
+  color: #808184;
+  border-left: 3px solid transparent;
+  transition: background 0.12s, color 0.12s;
+}
+
+.navItem:hover {
+  background: #faf9f7;
+  color: #231F20;
+}
+
+.navItem.active {
+  border-left-color: #F48220;
+  background: #FEF8F2;
+  color: #231F20;
+  font-weight: 500;
+}
+
+.navIcon {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+/* ─── User row ───────────────────────────────────────────── */
+.userRow {
+  display: flex;
+  align-items: center;
+  gap: 0.625rem;
+  padding: 0.875rem 1rem;
+  border-top: 0.5px solid #e0ddd8;
+}
+
+.avatar {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: #F48220;
+  color: #FFFFFF;
+  font-size: 11px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  letter-spacing: 0.03em;
+}
+
+.userName {
+  font-size: 12.5px;
+  font-weight: 500;
+  color: #231F20;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}

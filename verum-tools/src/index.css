@@ -1,0 +1,102 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  height: 100%;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#root {
+  height: 100%;
+}
+
+/* ─── Cards ─────────────────────────────────────────────── */
+.card {
+  background: #FFFFFF;
+  border: 0.5px solid #e0ddd8;
+  border-radius: 12px;
+  padding: 1.5rem;
+}
+
+/* ─── Form inputs ────────────────────────────────────────── */
+input[type="text"],
+input[type="email"],
+input[type="password"],
+textarea,
+select {
+  width: 100%;
+  background: #FFFFFF;
+  border: 0.5px solid #e0ddd8;
+  border-radius: 12px;
+  padding: 0.625rem 0.875rem;
+  font-size: 14px;
+  color: #231F20;
+  outline: none;
+  transition: border-color 0.15s;
+  font-family: inherit;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+  border-color: #F48220;
+}
+
+/* ─── Buttons ────────────────────────────────────────────── */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1.25rem;
+  border: none;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: opacity 0.15s;
+  font-family: inherit;
+}
+
+.btn:hover {
+  opacity: 0.85;
+}
+
+.btn-primary {
+  background: #F48220;
+  color: #FFFFFF;
+}
+
+.btn-secondary {
+  background: #08A698;
+  color: #FFFFFF;
+}
+
+.btn-ghost {
+  background: transparent;
+  color: #808184;
+  border: 0.5px solid #e0ddd8;
+}
+
+/* ─── Page shell ─────────────────────────────────────────── */
+.page {
+  padding: 2rem;
+}
+
+.page-title {
+  font-size: 1.375rem;
+  font-weight: 600;
+  color: #231F20;
+  margin-bottom: 0.375rem;
+}
+
+.page-subtitle {
+  font-size: 13px;
+  color: #808184;
+  margin-bottom: 1.75rem;
+}

@@ -1,0 +1,11 @@
+.shell {
+  display: flex;
+  height: 100%;
+  background: #F5F4F2;
+}
+
+.main {
+  flex: 1;
+  overflow-y: auto;
+  background: #F5F4F2;
+}
