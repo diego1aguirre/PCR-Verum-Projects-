@@ -1,0 +1,203 @@
+/* ─── Page header ────────────────────────────────────────── */
+.pageHeader {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 1.75rem;
+}
+
+.toggleBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.375rem;
+  padding: 0.4rem 0.75rem;
+  border: 0.5px solid #e0ddd8;
+  border-radius: 8px;
+  background: #ffffff;
+  color: #808184;
+  font-size: 13px;
+  cursor: pointer;
+  transition: background 0.12s, color 0.12s;
+  flex-shrink: 0;
+}
+
+.toggleBtn:hover {
+  background: #faf9f7;
+  color: #231F20;
+}
+
+/* ─── Form card ──────────────────────────────────────────── */
+.formCard {
+  max-width: 560px;
+}
+
+.sectionTitle {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #b0adb0;
+  margin: 0 0 1.25rem;
+}
+
+/* ─── Form layout ────────────────────────────────────────── */
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.1rem;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  font-size: 13px;
+}
+
+.field span {
+  font-weight: 500;
+  color: #231F20;
+}
+
+.field input[type="text"],
+.field input[type="email"],
+.field input[type="url"],
+.field input[type="date"],
+.field input[type="time"],
+.field input[type="file"],
+.field textarea {
+  border-radius: 10px;
+  border: 0.5px solid #e0ddd8;
+  padding: 0.6rem 0.75rem;
+  font-size: 13.5px;
+  background: #ffffff;
+  color: #231F20;
+  outline: none;
+  transition: border-color 150ms ease, box-shadow 150ms ease;
+  font-family: inherit;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.field textarea {
+  resize: vertical;
+  min-height: 5rem;
+}
+
+.field input:focus,
+.field textarea:focus {
+  border-color: #F48220;
+  box-shadow: 0 0 0 2px rgba(244, 130, 32, 0.15);
+}
+
+.fieldGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.75rem;
+}
+
+/* ─── Feedback ───────────────────────────────────────────── */
+.hint {
+  font-size: 12px;
+  color: #08A698;
+  margin: -0.25rem 0 0;
+}
+
+.error {
+  padding: 0.5rem 0.75rem;
+  border-radius: 8px;
+  background: rgba(185, 28, 28, 0.08);
+  color: #b91c1c;
+  font-size: 13px;
+  border: 0.5px solid rgba(185, 28, 28, 0.3);
+}
+
+.success {
+  padding: 0.5rem 0.75rem;
+  border-radius: 8px;
+  background: rgba(8, 166, 152, 0.1);
+  color: #0d9488;
+  font-size: 13px;
+  border: 0.5px solid rgba(8, 166, 152, 0.4);
+}
+
+/* ─── Primary button ─────────────────────────────────────── */
+.primaryButton {
+  align-self: flex-start;
+  padding: 0.55rem 1.25rem;
+  border-radius: 999px;
+  border: none;
+  background: linear-gradient(120deg, #F48220, #FAAE1C);
+  color: #ffffff;
+  font-weight: 600;
+  font-size: 13px;
+  letter-spacing: 0.03em;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  box-shadow: 0 8px 24px rgba(244, 130, 32, 0.35);
+  transition: transform 120ms ease, box-shadow 120ms ease, filter 120ms ease;
+  font-family: inherit;
+  white-space: nowrap;
+}
+
+.primaryButton:hover:not(:disabled) {
+  transform: translateY(-1px);
+  filter: brightness(1.05);
+  box-shadow: 0 12px 30px rgba(244, 130, 32, 0.5);
+}
+
+.primaryButton:active:not(:disabled) {
+  transform: translateY(0);
+  filter: brightness(0.97);
+}
+
+.primaryButton:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+}
+
+/* ─── Recipients ─────────────────────────────────────────── */
+.recipientList {
+  list-style: none;
+  margin: 0.25rem 0 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.recipientItem {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+  padding: 0.35rem 0.75rem;
+  border-radius: 999px;
+  background: #faf9f7;
+  border: 0.5px solid #e0ddd8;
+  font-size: 13px;
+}
+
+.recipientRemove {
+  border: none;
+  background: transparent;
+  color: #b91c1c;
+  font-size: 12px;
+  cursor: pointer;
+  padding: 0;
+  flex-shrink: 0;
+}
+
+.recipientRemove:hover {
+  text-decoration: underline;
+}
+
+/* ─── Divider ────────────────────────────────────────────── */
+.divider {
+  border: none;
+  border-top: 0.5px solid #e0ddd8;
+  margin: 0.5rem 0;
+}
