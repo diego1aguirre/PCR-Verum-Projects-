@@ -1,3 +1,4 @@
+import type { ReactNode, CSSProperties } from 'react';
 import { NavLink } from 'react-router-dom';
 import { Mail, AlignLeft, FilePlus2, Settings } from 'lucide-react';
 import styles from './Sidebar.module.css';
@@ -56,8 +57,8 @@ function SectionLabel({
   children,
   style,
 }: {
-  children: React.ReactNode;
-  style?: React.CSSProperties;
+  children: ReactNode;
+  style?: CSSProperties;
 }) {
   return (
     <p className={styles.sectionLabel} style={style}>
@@ -72,8 +73,8 @@ function NavItem({
   children,
 }: {
   to: string;
-  icon: React.ReactNode;
-  children: React.ReactNode;
+  icon: ReactNode;
+  children: ReactNode;
 }) {
   return (
     <NavLink
