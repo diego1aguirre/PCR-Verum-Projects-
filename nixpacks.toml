@@ -1,0 +1,8 @@
+[phases.install]
+cmds = ['npm --prefix verum-tools install']
+
+[phases.build]
+cmds = ['npm --prefix verum-tools run build']
+
+[start]
+cmd = 'node verum-tools/server.js'
