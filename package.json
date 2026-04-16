@@ -6,7 +6,7 @@
     "node": ">=18"
   },
   "scripts": {
-    "build": "cd verum-tools && npm install",
+    "build": "cd verum-tools && npm install && npm run build",
     "start": "node verum-tools/server.js"
   }
 }

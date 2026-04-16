@@ -4,6 +4,8 @@ import multer from "multer";
 import nodemailer from "nodemailer";
 import dotenv from "dotenv";
 import { createClient } from "@supabase/supabase-js";
+import { fileURLToPath } from "url";
+import { dirname, join } from "path";
 
 dotenv.config();
 
@@ -35,6 +37,7 @@ if (!EMAIL_USER || !EMAIL_PASS) {
   console.warn("Warning: EMAIL_USER or EMAIL_PASS is not set in the environment.");
 }
 
+// CORS — only needed for external frontends (e.g. local dev or separate Vercel deploy)
 const FRONTEND_URL = process.env.FRONTEND_URL;
 app.use(cors({
   origin: (origin, callback) => {
@@ -44,6 +47,11 @@ app.use(cors({
     return callback(new Error("Not allowed by CORS"));
   },
 }));
+
+// Serve built Vite frontend (same origin — no CORS needed)
+const __dirname = dirname(fileURLToPath(import.meta.url));
+const distPath = join(__dirname, "dist");
+app.use(express.static(distPath));
 
 app.post("/send-email", upload.single("pdf"), async (req, res) => {
   try {
@@ -123,4 +131,9 @@ app.post("/send-email", upload.single("pdf"), async (req, res) => {
   }
 });
 
-app.listen(PORT, () => console.log(`Email server listening on http://localhost:${PORT}`));
+// Fallback: serve index.html for all non-API routes (React Router)
+app.get("*", (_req, res) => {
+  res.sendFile(join(distPath, "index.html"));
+});
+
+app.listen(PORT, () => console.log(`Server listening on http://localhost:${PORT}`));
